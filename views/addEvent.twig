@@ -2,7 +2,7 @@
 
 {% block body %}
 <h1>Add Events</h1>
-<form method="post" action="http://localhost:5000/events/addEvent">
+<form method="post" action="http://localhost:5000/events/addEvent"  enctype="multipart/form-data">
 <label>titre</label>
 <input type="text" name="titre" /><br/>
 <label>nombre de participants</label>
@@ -11,6 +11,7 @@
 <input type="text" name="description" /><br/>
 <label>date</label>
 <input type="date" name="date_Event" /><br/>
+<input type="file" name="image_Event" /><br/>
 <button type="submit">add Event</button>
 </form>
 {% endblock %}

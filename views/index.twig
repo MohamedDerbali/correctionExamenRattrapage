@@ -8,6 +8,7 @@
 <th>Nbre participants</th>
 <th>Description</th>
 <th>Date</th>
+<th>Event Image</th>
 <th>Actions</th>
 </thead>
 <tbody>
@@ -17,6 +18,7 @@
 <td>{{e.nbre_participant}}</td>
 <td>{{e.description}}</td>
 <td>{{e.date_Event | date}}</td>
+<td><img src={{ '/images/'~ e.image_Event}} /></td>
 <td>
 <a href="http://localhost:5000/events/updateEvent/{{e._id}}">Update</a>
 <a href="http://localhost:5000/events/deleteEvent/{{e._id}}">Delete</a>
