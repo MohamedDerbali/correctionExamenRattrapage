@@ -1,0 +1,28 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+<h1>Events List</h1>
+<table border=1>
+<thead>
+<th>Titre</th>
+<th>Nbre participants</th>
+<th>Description</th>
+<th>Date</th>
+<th>Actions</th>
+</thead>
+<tbody>
+{% for e in events %}
+<tr>
+<td>{{e.titre}}</td>
+<td>{{e.nbre_participant}}</td>
+<td>{{e.description}}</td>
+<td>{{e.date_Event | date}}</td>
+<td>
+<a href="http://localhost:5000/events/updateEvent/{{e._id}}">Update</a>
+<a href="http://localhost:5000/events/deleteEvent/{{e._id}}">Delete</a>
+</td>
+</tr>  
+{% endfor %}
+</tbody>
+</table>
+{% endblock %}

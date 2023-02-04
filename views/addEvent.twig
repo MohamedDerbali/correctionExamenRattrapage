@@ -1,0 +1,16 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+<h1>Add Events</h1>
+<form method="post" action="http://localhost:5000/events/addEvent">
+<label>titre</label>
+<input type="text" name="titre" /><br/>
+<label>nombre de participants</label>
+<input type="number" name="nbre_participant" /><br/>
+<label>description</label>
+<input type="text" name="description" /><br/>
+<label>date</label>
+<input type="date" name="date_Event" /><br/>
+<button type="submit">add Event</button>
+</form>
+{% endblock %}

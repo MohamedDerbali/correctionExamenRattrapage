@@ -1,0 +1,16 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+<h1>Update Events</h1>
+<form method="post" action="http://localhost:5000/events/updateEvent/{{e._id}}">
+<label>titre</label>
+<input type="text" name="titre" value={{e.titre}} /><br/>
+<label>nombre de participants</label>
+<input type="number" name="nbre_participant" value={{e.nbre_participant}} /><br/>
+<label>description</label>
+<input type="text" name="description" value={{e.description}} /><br/>
+<label>date</label>
+<input type="date" name="date_Event" value={{e.date_Event|date}} /><br/>
+<button type="submit">update Event</button>
+</form>
+{% endblock %}
